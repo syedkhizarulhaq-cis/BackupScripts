@@ -7,9 +7,9 @@ var4=`ls -Artls /var/opt/gitlab/backups/ | tail -n 1 | cut -d ' ' -f 10 | tr -d 
 if ([ $var1 -eq $var2 ] && [ $var4 -gt $var3 ]); then #If both file size are same and file creation timestamp of last file is greater than second last file
 	var5=`ls -Art /var/opt/gitlab/backups/ | tail -n 2 | head -n 1` #Get second last file
 	var6=`ls -Art /var/opt/gitlab/backups/ | tail -n 1` #Get last file
-	rm /var/opt/gitlab/backups/$var5 #remove second last file
+	rm -f /var/opt/gitlab/backups/$var5 #remove second last file
 else
-	rm /var/opt/gitlab/backups/$var6 #remove last file
+	rm -f /var/opt/gitlab/backups/$var6 #remove last file
 
 fi
 
