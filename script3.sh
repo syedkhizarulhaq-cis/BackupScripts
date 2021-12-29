@@ -1,3 +1,4 @@
+Credits: @mmudabbir
 #!/bin/bash
 var1=`ls -Asrt /var/opt/gitlab/backups | tail -n 1 | cut -d ' ' -f 1` #Get the file size of last file
 var2=`ls -Asrt /var/opt/gitlab/backups | tail -n 2 | head -n 1 | cut -d ' ' -f 1` #Get the file size 
