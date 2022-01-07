@@ -15,3 +15,5 @@ Testing out some back up strategies using scripting
 
 *) In order to achieve this efficiently, movetowin.sh was made which moved the backup files to a mounted folder depending on if the file names were different and if the windows
 machines is live or up.
+
+*) Similarly the movetowin.sh script will also be added to the crontab
