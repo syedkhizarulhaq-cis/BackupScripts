@@ -7,6 +7,8 @@ if ([ $count -gt 0 ] && [ `ls /var/opt/gitlab/backups/ | tail -n 1` == `ls /mnt/
 then
 
     echo "Do nothing"
+    curl -X POST --data-urlencode "payload={\"channel\": \"#on-premise-gitlab\", \"username\": \"webhookbot\", \"text\": \"Redundant backups do not require removal today\", \"icon_emoji\": \":ghost:\"}" https://<webhook>
+    
 
 else
 
