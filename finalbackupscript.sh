@@ -18,5 +18,7 @@ elif ([ $var1 -eq $var2 ] && [ `stat -c %Y $base_path/$var4` -lt `stat -c %Y $ba
 else
 
 	echo "Do nothing";
+	curl -X POST --data-urlencode "payload={\"channel\": \"#on-premise-gitlab\", \"username\": \"webhookbot\", \"text\": \"Redundant backups do not require removal today\", \"icon_emoji\": \":ghost:\"}" https://<webhook> # Slack notification
+	
 
 fi
