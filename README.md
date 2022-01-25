@@ -17,3 +17,5 @@ Testing out some back up strategies using scripting
 machines is live or up.
 
 *) Similarly the movetowin.sh script will also be added to the crontab
+
+*) generate alert from your crontab : 0 17 * * 1-5 gitlab-backup create > /var/log/backup.log 2>&1 ; [ $? -ne 0 ] && /bin/bash /opt/script.sh #here script.sh has alert generating part
